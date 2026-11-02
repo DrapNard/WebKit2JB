@@ -12,6 +12,11 @@ This dossier summarizes source-level FontFace research and the boundaries of loc
 
 ## Documents
 
+- [Original research baseline](RESEARCH_BASELINE.md)
+- [Data catalog and handling](DATA_CATALOG.md)
+- [PC WebKitGTK results](PC_WEBKITGTK_RESULTS.md)
+- [Re-entrancy and lifetime analysis](REENTRANCY_ANALYSIS.md)
+- [Optional safe FontFace diagnostic design](../docs/OPTIONAL-SAFE-FONTFACE-DIAGNOSTIC.md)
 - [Findings and evidence boundary](FINDINGS.md)
 - [Evidence matrix](EVIDENCE_MATRIX.md)
 - [Source inventory](SOURCE_INVENTORY.md)
@@ -31,6 +36,11 @@ This dossier summarizes source-level FontFace research and the boundaries of loc
 - [Unresolved questions](UNRESOLVED_QUESTIONS.md)
 - [FontFace lifetime model](lifetime-model/RESULTS.md)
 - [NS2JB portability notes](ns2jb-portability/PORTABILITY_AUDIT.md)
+
+## Machine-readable research data
+
+- [Original source manifest](data/ORIGINAL_SOURCE_MANIFEST.json)
+- [Redacted Switch report aggregate](data/SWITCH_REPORT_AGGREGATE.json)
 
 ## Evidence boundary
 

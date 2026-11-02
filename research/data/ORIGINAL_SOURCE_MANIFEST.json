@@ -1,0 +1,70 @@
+{
+  "schema": "webkit2jb-original-source-manifest/1",
+  "generated_from": "read-only source archive inspection recorded by the local research project",
+  "raw_archive_included": false,
+  "archive": {
+    "label": "NS2_23.0.0",
+    "sha256": "a2bcdfb7ec695d1ac5c790317a1239ccdb40e0ba8e052891c2ebba1314200f90",
+    "size_bytes": 197123071,
+    "entry_count": 40478,
+    "uncompressed_bytes": 728410973,
+    "webkit_tree_label": "webkit_3.12.11",
+    "webkit_embedded_version": "613.3.9",
+    "javascriptcore_embedded_version": "613.3.9",
+    "wkc_tree_label": "WKC_3.12.11",
+    "wkc_api_version": "7.0.0",
+    "wkc_customer_release_version": "3.12.11",
+    "wkc_webkit_version_macro": "613.0",
+    "older_webkit_tree_version": "601.7.4",
+    "copyright_notice": "NetFront Browser NX OSS Copyright; ACCESS Co., Ltd. 2023-2026; some files modified by ACCESS",
+    "archive_label_matches_reported_firmware": false,
+    "reported_firmware": "23.0.1",
+    "firmware_browser_build_id_available": false
+  },
+  "tree_counts": {
+    "webkit_3.12.11_entries": 19063,
+    "webkit_3.12.11_files_reported_by_version_inventory": 18473,
+    "wkc_3.12.11_entries": 715,
+    "wkc_3.12.11_files": 656,
+    "older_webkit_0.12.2_entries": 13217
+  },
+  "selected_archive_member_hashes": {
+    "webkit/WebCore/Configurations/Version.xcconfig": "0143f31ad97097b3172b9808b8760d6473dda2500ad0f1ff59f21e8a82de3406",
+    "javascriptcore/Configurations/Version.xcconfig": "fb3f6d2cfe7465fc9b475866e3d3ec7e38dea2efe2edcd160565ddb3de9d821f",
+    "wkc/WebKit/WKC/webkit/WKCVersion.h": "38aad5ec86d8688475ea12e125505ee8a34dbd7660f94ca00821ac7a7de7f356",
+    "wkc/WebKit/WKC/webkit/WKCVersion.cpp": "43d2bfa57988991adac78c6c2f4e9406c535122b24293c9cf5ff5853be355147",
+    "wkc/WebKit/WKC/WebCoreSupport/FrameLoaderClientWKC.cpp": "cd8cc6ad9320c595f95b41fa38669d93797590db76533d8c6fb2bedcf61533f4",
+    "webkit/WebCore/css/CSSFontFaceSet.h": "9f0c6bbe2cdd70536d478ed9cbab00b77f389ab898b4d453f0714aa00172ec0a",
+    "webkit/WebCore/css/CSSFontFaceSet.cpp": "a2fa1191733dcf891ca660813fedc65c5fa754e68d51eca0c6bf2619b7b356de",
+    "webkit/WebCore/css/FontFaceSet.cpp": "115780a210cca765de829e56c7ae5f0ac24398a072af74e8e5a22239be223d49",
+    "webkit/WebCore/css/CSSFontFace.cpp": "14881f47a322dd6b570c6e8acfc26bd28376d6af97aa716744177027702b315b"
+  },
+  "upstream_changes": [
+    {
+      "issue": "312202",
+      "commit": "5f0480f771ba1749663a8257eafca70af17b7cec",
+      "source_motif": "strong Ref ownership keeps matched CSSFontFace objects alive across re-entry",
+      "archive_motif": "non-owning reference_wrapper results"
+    },
+    {
+      "issue": "313577",
+      "cve": "CVE-2026-43715",
+      "commit": "5aedb82710ba578f61501106e78f6b25b7f7a558",
+      "source_motif": "notification checks that a snapshotted client remains in the current client set",
+      "archive_motif": "snapshotted strong client references without the later membership check"
+    },
+    {
+      "issue": "322233",
+      "commit": "64a55fd574c40d8fda92b4f114d2a2afb9f0ec71",
+      "source_motif": "status is committed before client notification",
+      "archive_motif": "client notification precedes assignment of the new status"
+    }
+  ],
+  "negative_searches": {
+    "fontface_named_paths_in_companion_wkc_tree": 0,
+    "exact_audited_method_symbol_hits_in_companion_wkc_tree": 0,
+    "binary_like_members_in_archive": 0,
+    "interpretation": "These are results of searches in the supplied source package only; they do not establish the firmware binary contents."
+  },
+  "evidence_boundary": "The source package has no WifiWebAuthApplet binary, firmware Build ID, or trusted source-to-firmware mapping."
+}
