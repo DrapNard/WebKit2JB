@@ -10,14 +10,14 @@ The payload source contains privileged Horizon IPC and process-memory / executab
 
 | Question | Finding | Classification |
 |---|---|---|
-| Is the small C/assembly payload source separate from SmileBASIC syntax? | Yes. `main.c`, `process.c`, and `start.S` are native source files, and the upstream README identifies Zig 0.15.2 as its reproduction toolchain. That separation does not make the program platform-independent. | CONFIRMÉ |
-| Does the payload itself depend on Horizon? | Yes. Its assembly startup layer contains AArch64 system-call wrappers and its C sources depend on Horizon IPC/process semantics. It is built for the Horizon module environment rather than a Linux process ABI. | CONFIRMÉ |
-| Does the full NS2JB execution path depend on SmileBASIC? | Yes. The README identifies a SmileBASIC program and host-side Node orchestration. The native helper is one component in a larger loader/orchestration path, not a standalone WebKit artifact. | CONFIRMÉ |
-| Are pure C routines reusable? | Only routines proven free of Horizon types, handles, service state, and side effects could be extracted for ordinary unit tests. No such isolated library boundary or Linux test suite was demonstrated by the reviewed payload files. | PROBABLE / NON DÉMONTRÉ |
+| Is the small C/assembly payload source separate from SmileBASIC syntax? | Yes. `main.c`, `process.c`, and `start.S` are native source files, and the upstream README identifies Zig 0.15.2 as its reproduction toolchain. That separation does not make the program platform-independent. | CONFIRMED |
+| Does the payload itself depend on Horizon? | Yes. Its assembly startup layer contains AArch64 system-call wrappers and its C sources depend on Horizon IPC/process semantics. It is built for the Horizon module environment rather than a Linux process ABI. | CONFIRMED |
+| Does the full NS2JB execution path depend on SmileBASIC? | Yes. The README identifies a SmileBASIC program and host-side Node orchestration. The native helper is one component in a larger loader/orchestration path, not a standalone WebKit artifact. | CONFIRMED |
+| Are pure C routines reusable? | Only routines proven free of Horizon types, handles, service state, and side effects could be extracted for ordinary unit tests. No such isolated library boundary or Linux test suite was demonstrated by the reviewed payload files. | PROBABLE / NOT DEMONSTRATED |
 | Can the payload be loaded directly by WifiWebAuthApplet? | No such loader or ABI is exposed by the browser page. A web document executing JavaScript is not an ELF/NSO/NRO loader. | INCOMPATIBLE |
-| Is the existing NRO compatible with NS2JB's native helper interface? | No direct compatibility is demonstrated. The NRO is an independent libnx homebrew application using a homebrew launch context; it does not implement the payload's Horizon service contract. | NON DÉMONTRÉ; direct loading is INCOMPATIBLE |
-| Is the shipped native image byte-for-byte reproducible here? | Not tested. The upstream manifest advertises a 4,757-byte payload and a SHA-256, while the README says Zig 0.15.2 is used for reproduction. The exact binary bytes were not acquired and compared. | NON DÉMONTRÉ |
-| Are reuse rights established? | The project API response exposed no license metadata. No license was independently established for reuse. | NON DÉMONTRÉ |
+| Is the existing NRO compatible with NS2JB's native helper interface? | No direct compatibility is demonstrated. The NRO is an independent libnx homebrew application using a homebrew launch context; it does not implement the payload's Horizon service contract. | NOT DEMONSTRATED; direct loading is INCOMPATIBLE |
+| Is the shipped native image byte-for-byte reproducible here? | Not tested. The upstream manifest advertises a 4,757-byte payload and a SHA-256, while the README says Zig 0.15.2 is used for reproduction. The exact binary bytes were not acquired and compared. | NOT DEMONSTRATED |
+| Are reuse rights established? | The project API response exposed no license metadata. No license was independently established for reuse. | NOT DEMONSTRATED |
 
 ## Component boundary
 

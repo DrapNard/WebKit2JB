@@ -25,9 +25,9 @@ The sources indicate an AArch64 Horizon module entry rather than a Linux `main()
 
 ## Verdict
 
-- **AArch64 source target:** CONFIRMÉ from source/build metadata.
+- **AArch64 source target:** CONFIRMED from source/build metadata.
 - **Published `main` is an NSO:** PROBABLE from the upstream packaging source; not byte-verified locally.
-- **Published size and SHA match its manifest:** NON DÉMONTRÉ in this lab.
+- **Published size and SHA match its manifest:** NOT DEMONSTRATED in this lab.
 - **ELF, NSO, NRO, and NPDM interchangeability:** INCOMPATIBLE as formats/loader contracts.
 
 Sources: [manifest](https://gitlab.com/pepsipu/ns2jb/-/blob/95f5525089273c5fce0b95047f3600f8442e96ae/engine/switch2/ro/payload/manifest.json), [startup source](https://gitlab.com/pepsipu/ns2jb/-/blob/95f5525089273c5fce0b95047f3600f8442e96ae/engine/switch2/ro/payload/start.S), [builder source](https://gitlab.com/pepsipu/ns2jb/-/blob/95f5525089273c5fce0b95047f3600f8442e96ae/engine/build-payload.cjs), [local NRO build record](../native-demo/build-info.json).

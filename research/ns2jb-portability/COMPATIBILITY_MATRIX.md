@@ -18,4 +18,4 @@
 
 ## Existing NRO verdict
 
-The local NRO is a standalone libnx diagnostic application, not an NS2JB-compatible helper. Its exact metadata and hash are recorded at `research/native-demo/build-info.json`; the bytes start with the expected NRO header marker at the NRO header offset. Its console behavior has not been tested. **Direct NSO/NRO exchange or invocation is INCOMPATIBLE; shared data-only logic is NON DÉMONTRÉ.**
+The local NRO is a standalone libnx diagnostic application, not an NS2JB-compatible helper. Its exact metadata and hash are recorded at `research/native-demo/build-info.json`; the bytes start with the expected NRO header marker at the NRO header offset. Its console behavior has not been tested. **Direct NSO/NRO exchange or invocation is INCOMPATIBLE; shared data-only logic is NOT DEMONSTRATED.**

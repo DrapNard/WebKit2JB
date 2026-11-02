@@ -8,6 +8,7 @@ A local captive-portal research lab with safe browser diagnostics and a non-priv
 - `shared/` and `schemas/` — platform-neutral browser reporting and JSON contracts.
 - `bridge/` — C API, versioned protocol, Linux/mock/Horizon backends, read-only memory-policy reporting, and build/verification scripts.
 - `research/ns2jb-portability/` — source-level portability notes; no NS2JB payload source is copied.
+- [`research/README.md`](research/README.md) — index for the English research dossier.
 - `history/legacy-backup-inventory.json` — hashes for historical backup files retained in the private workspace.
 
 ## Evidence boundary

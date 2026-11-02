@@ -14,10 +14,10 @@ No files in the original public repository or WebKit lab were changed. No toolch
 
 | Item | Value | Evidence status |
 |---|---|---|
-| Advertised Zig version | 0.15.2 | CONFIRMÉ from upstream README/builder source |
-| Advertised payload size | 4,757 bytes | CONFIRMÉ as manifest text only |
-| Advertised payload SHA-256 | `d590cbfc5d9152c24d5a36f083f8470a2f3164be6b78130129d44132b939701a` | CONFIRMÉ as manifest text only; not recomputed |
-| Rebuilt size/hash | Not available | NON DÉMONTRÉ |
-| Timestamp/environment causes of any delta | Not assessable | NON DÉMONTRÉ |
+| Advertised Zig version | 0.15.2 | CONFIRMED from upstream README/builder source |
+| Advertised payload size | 4,757 bytes | CONFIRMED as manifest text only |
+| Advertised payload SHA-256 | `d590cbfc5d9152c24d5a36f083f8470a2f3164be6b78130129d44132b939701a` | CONFIRMED as manifest text only; not recomputed |
+| Rebuilt size/hash | Not available | NOT DEMONSTRATED |
+| Timestamp/environment causes of any delta | Not assessable | NOT DEMONSTRATED |
 
 Sources: [README](https://gitlab.com/pepsipu/ns2jb/-/blob/95f5525089273c5fce0b95047f3600f8442e96ae/README.md), [builder](https://gitlab.com/pepsipu/ns2jb/-/blob/95f5525089273c5fce0b95047f3600f8442e96ae/engine/build-payload.cjs), [manifest](https://gitlab.com/pepsipu/ns2jb/-/blob/95f5525089273c5fce0b95047f3600f8442e96ae/engine/switch2/ro/payload/manifest.json).

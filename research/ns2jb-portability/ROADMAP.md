@@ -27,4 +27,4 @@ These steps remain blocked in this audit because the payload implements process-
 
 ## Verdict
 
-The source tree has a native helper that is syntactically separate from SmileBASIC but architecturally tied to Horizon. That separation is insufficient to call the helper portable. Exact build reproducibility, artifact format bytes, and integration with the existing NRO are **NON DÉMONTRÉ** here. Direct loading from WifiWebAuthApplet is **INCOMPATIBLE** with the interfaces evidenced in this repository.
+The source tree has a native helper that is syntactically separate from SmileBASIC but architecturally tied to Horizon. That separation is insufficient to call the helper portable. Exact build reproducibility, artifact format bytes, and integration with the existing NRO are **NOT DEMONSTRATED** here. Direct loading from WifiWebAuthApplet is **INCOMPATIBLE** with the interfaces evidenced in this repository.
