@@ -1,0 +1,3 @@
+This test font is a renamed local derivative of Noto Sans.
+Noto Sans is distributed under the SIL Open Font License 1.1; see Noto-Fonts-OFL.txt.
+The custom family name is used only to test local Fontconfig/WebKit resolution.

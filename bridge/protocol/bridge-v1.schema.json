@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/webkit2jb-bridge/1",
+  "title": "WebKit2JB bridge protocol v1",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": ["protocol", "requestId", "operation", "backend", "payload"],
+      "properties": {
+        "protocol": {"const": "webkit2jb-bridge/1"},
+        "requestId": {"type": "string", "pattern": "^[A-Za-z0-9_-]{1,64}$"},
+        "operation": {"enum": ["capabilities", "diagnostic", "connectivity", "echo", "ns2jb-compatibility", "memory-policy"]},
+        "backend": {"enum": ["linux-native", "linux-mock", "horizon-homebrew", "pc-simulated"]},
+        "payload": {"type": "object", "maxProperties": 1, "properties": {"message": {"type": "string", "maxLength": 256}}, "additionalProperties": false}
+      },
+      "allOf": [
+        {"if": {"properties": {"operation": {"const": "echo"}}, "required": ["operation"]},
+         "then": {"properties": {"payload": {"required": ["message"]}}}},
+        {"if": {"properties": {"operation": {"enum": ["capabilities", "diagnostic", "connectivity", "ns2jb-compatibility", "memory-policy"]}}, "required": ["operation"]},
+         "then": {"properties": {"payload": {"maxProperties": 0}}}}
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": ["protocol", "requestId", "operation", "backend", "ok", "error", "result", "execution"],
+      "properties": {
+        "protocol": {"const": "webkit2jb-bridge/1"},
+        "requestId": {"type": "string", "pattern": "^[A-Za-z0-9_-]{1,64}$"},
+        "operation": {"type": "string", "minLength": 1, "maxLength": 64},
+        "backend": {"enum": ["linux-native", "linux-mock", "horizon-homebrew", "pc-simulated", "unavailable"]},
+        "ok": {"type": "boolean"},
+        "error": {"type": ["object", "null"]},
+        "result": {"type": "object"},
+        "execution": {
+          "type": "object", "required": ["mode", "platform", "architecture", "origin", "nativeLibraryLoaded", "nativeProcessConnected", "switchNativeExecution"],
+          "properties": {
+            "mode": {"enum": ["simulated", "native-library", "homebrew-process", "none"]},
+            "platform": {"enum": ["pc", "linux", "horizon", "unknown"]},
+            "architecture": {"type": "string", "minLength": 1, "maxLength": 32},
+            "origin": {"enum": ["python-simulator", "ctypes-loaded-library", "libnx-homebrew", "unavailable"]},
+            "nativeLibraryLoaded": {"type": "boolean"},
+            "nativeProcessConnected": {"type": "boolean"},
+            "switchNativeExecution": {"const": false}
+          }, "additionalProperties": false
+        }
+      }, "additionalProperties": false
+    }
+  ]
+}

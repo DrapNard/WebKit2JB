@@ -1,0 +1,13 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR aarch64)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+find_program(W2JB_CLANG clang)
+find_program(W2JB_LLVM_AR llvm-ar)
+if(NOT W2JB_CLANG OR NOT W2JB_LLVM_AR)
+    message(FATAL_ERROR "clang and llvm-ar are required for the AArch64 cross build")
+endif()
+set(CMAKE_C_COMPILER "${W2JB_CLANG}" CACHE FILEPATH "Clang cross compiler")
+set(CMAKE_C_COMPILER_TARGET aarch64-linux-gnu)
+set(CMAKE_AR "${W2JB_LLVM_AR}" CACHE FILEPATH "LLVM archiver")
+set(CMAKE_C_FLAGS_INIT "-I${CMAKE_CURRENT_LIST_DIR}/../compat/aarch64-linux/include")

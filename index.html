@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#0b1421">
+<title>WebKit2JB — Switch 2 Research Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1421;--panel:#132238;--panel2:#192b42;--line:#304761;--text:#edf4fc;--muted:#b4c3d5;--mint:#59dfc1;--blue:#a9d4ff;--amber:#f1cb80}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:radial-gradient(ellipse at 85% 0,#1a3653 0,transparent 40%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{width:min(100% - 20px,900px);margin:0 auto}
+header{padding:20px 0 16px;border-bottom:1px solid var(--line)}
+.kicker{color:var(--mint);font-size:.76rem;letter-spacing:.12em;font-weight:800;text-transform:uppercase}
+h1{font-size:clamp(1.55rem,5vw,2.35rem);line-height:1.13;margin:.35rem 0 .5rem}
+h2{font-size:1.2rem;line-height:1.25;margin:.2rem 0 .55rem}
+p{margin:.35rem 0;color:var(--muted)}
+main{padding:16px 0 24px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:16px;margin:0 0 14px}
+.bridge-panel{padding:12px 16px;background:#101d2d}
+.bridge-panel h2{font-size:1.05rem}
+.bridge-panel pre{max-height:180px}
+.diagnostic-list{margin-top:12px}
+.diagnostic-card{display:block;width:100%;text-align:left;background:#172a41;border:1px solid #36516d;color:var(--text);border-radius:12px;padding:15px;margin:0 0 11px;min-height:82px;cursor:pointer;font:inherit;touch-action:manipulation}
+.diagnostic-card strong{display:block;font-size:1.08rem;margin-bottom:4px}
+.diagnostic-card span{display:block;color:var(--muted);font-size:.93rem}
+button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.primary,.secondary{width:100%;min-height:52px;padding:12px 15px;border:0;border-radius:10px;font:700 1rem system-ui,sans-serif;touch-action:manipulation;cursor:pointer}
+.primary{background:var(--mint);color:#09211f}
+.secondary{background:#233a55;color:var(--text);border:1px solid #4a6683}
+button:disabled{opacity:.55;cursor:wait}
+.button-row{display:flex;gap:10px;margin:12px 0}
+.button-row button{flex:1}
+.notice{border-left:3px solid var(--amber);background:#2a261d;color:#f4dfb8;padding:10px 12px;border-radius:0 9px 9px 0;margin-top:12px}
+.status{min-height:1.5em;margin:.55rem 0;color:#cce4f5}
+.events{min-height:88px;max-height:220px;overflow:auto;background:var(--panel2);border:1px solid #35516d;border-radius:9px;padding:9px 12px;margin:8px 0 14px}
+.events p{margin:.25rem 0;color:#d9e8f6;font:13px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere}
+pre{max-height:44vh;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--panel2);border:1px solid #35516d;border-radius:9px;padding:12px;color:#e2efff;font:13px/1.45 ui-monospace,SFMono-Regular,Consolas,monospace}
+code{color:#bce8df;background:#1b3042;border-radius:4px;padding:1px 4px}
+footer{border-top:1px solid var(--line);padding:14px 0 24px;color:#94a8bd;font-size:.85rem}
+[hidden]{display:none!important}
+@media(max-width:560px){.wrap{width:calc(100% - 16px)}header{padding-top:16px}.panel{padding:13px}.button-row{flex-direction:column;gap:6px}.primary,.secondary{min-height:54px}.events{max-height:180px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">CAPTIVE PORTAL · LOCAL LAB</div>
+  <h1>WebKit2JB — Switch 2 Research Lab</h1>
+  <p>Choose a diagnostic. It starts only after you press “Run”.</p>
+</header>
+<main>
+  <section id="home-view" aria-labelledby="home-title">
+    <div class="panel">
+      <div class="kicker">MANUAL DIAGNOSTICS</div>
+      <h2 id="home-title">Choose a diagnostic</h2>
+      <div class="diagnostic-list">
+        <button class="diagnostic-card" type="button" data-diagnostic="api">
+          <strong>API availability</strong>
+          <span>WebKit API availability, a minimal Canvas 2D check, and FontFaceSet.</span>
+        </button>
+        <button class="diagnostic-card" type="button" data-diagnostic="font-load">
+          <strong>Local font loading</strong>
+          <span>Loads one local system face, then removes it from the set after resolution.</span>
+        </button>
+        <button class="diagnostic-card" type="button" data-diagnostic="reentrancy">
+          <strong>JavaScript reentrancy</strong>
+          <span>Observes the <code>then</code> getter during a <code>document.fonts.load()</code> call.</span>
+        </button>
+      </div>
+
+      <p class="notice">Legacy scenarios associated with 2168-0002 are not available from this portal. The reentrancy diagnostic does not remove CSS rules while loading. Any engine test may still cause the browser to close unexpectedly.</p>
+    </div>
+    <div class="panel">
+      <div class="kicker">HISTORICAL REPORTS</div>
+      <h2>Local comparison</h2>
+      <p id="summaryStatus" class="status">Reading existing observations…</p>
+      <pre id="summary">Loading…</pre>
+    </div>
+    <div class="panel bridge-panel" aria-live="polite">
+      <div class="kicker">COMPATIBILITÉ</div>
+      <h2>Bridge local</h2>
+      <p id="bridge-status" class="status">Unknown state · no native Switch backend is assumed.</p>
+      <div class="button-row">
+        <button id="bridge-reconnect" class="secondary" type="button">Check local service</button>
+        <button id="bridge-diagnostic" class="secondary" type="button" disabled>Diagnose local backend</button>
+      </div>
+      <button id="bridge-ns2jb-compatibility" class="secondary" type="button" disabled>Check NS2JB compatibility</button>
+      <button id="bridge-memory-policy" class="secondary" type="button" disabled>Inspect bridge process W^X</button>
+      <pre id="bridge-result">Waiting for a manual check.</pre>
+    </div>
+  </section>
+
+  <section id="diagnostic-view" hidden aria-live="polite">
+    <div class="panel">
+      <div class="kicker">SELECTED DIAGNOSTIC</div>
+      <h2 id="diagnostic-title">Diagnostic</h2>
+      <p id="diagnostic-description"></p>
+      <div class="button-row">
+        <button id="back-home" class="secondary" type="button">← Portal home</button>
+        <button id="run-diagnostic" class="primary" type="button">Run this diagnostic once</button>
+      </div>
+      <p id="diagnostic-status" class="status">Ready. No diagnostic has run.</p>
+    </div>
+    <div class="panel">
+      <h2>Diagnostic events</h2>
+      <div id="event-log" class="events" role="log" aria-live="polite">Waiting for manual start.</div>
+    </div>
+    <div class="panel">
+      <h2>JSON report and server receipt</h2>
+      <pre id="report-json">No report yet. Press “Run” to start.</pre>
+    </div>
+  </section>
+</main>
+<footer>WebKit2JB · Structured results with session ID, timestamps, and server acknowledgement.</footer>
+</div>
+<script src="/shared/capabilities.js"></script>
+<script src="/shared/reporting.js"></script>
+<script src="/diagnostics.js"></script>
+<script src="/bridge-client.js"></script>
+<script src="/portal.js"></script>
+</body>
+</html>

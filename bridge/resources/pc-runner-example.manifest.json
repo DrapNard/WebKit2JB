@@ -1,0 +1,12 @@
+{
+  "schema": "webkit2jb-pc-runner-artifact/1",
+  "artifact": "pc-runner-example.elf",
+  "format": "ELF64",
+  "architecture": "x86_64",
+  "elfType": "ET_EXEC",
+  "size": 9248,
+  "capacity": 65536,
+  "sha256": "543e3c76b417585f8f30bb174d8d7dc276c242aa33b1c7ab028e03bdf97cf54e",
+  "origin": "webkit-podman-lab/research/uaf-x86-lab/resources/embedded-program.elf",
+  "execution": "metadata-only"
+}

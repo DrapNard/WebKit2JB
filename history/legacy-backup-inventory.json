@@ -1,0 +1,280 @@
+{
+  "description": "Hash inventory only. Original backup files remain in the private local workspace and are not included in this public candidate.",
+  "files": [
+    {
+      "path": "api-probe.py.bak",
+      "size": 7242,
+      "sha256": "d8934efc6bf977cfd5fa9aa330f185c6ca5d0804b129941d90bab52ab0e447d0"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-185000",
+      "size": 12131,
+      "sha256": "8a2c2ba9de46b0fb5711aeae2361654f86aa2b4e3d698a16e21e818d72d644e1"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-185744",
+      "size": 13494,
+      "sha256": "7f334520b51a2f3125da5bb2b6a619cc549d0259256214c14acaca22ba1d696c"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-190024",
+      "size": 14791,
+      "sha256": "5217507623b9ea98c616ec41f75a432b61fc02c5db0dc99132af29d7b828f344"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-190336",
+      "size": 14790,
+      "sha256": "451102d19e7665ab6b9835bc66fb72f0afd4d6556d7fd6423b4a7dcdba727bea"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-194303",
+      "size": 16508,
+      "sha256": "4ec43bdceb70e2e4d4dd11a112499f5e1c81166a2c3ca08f852a13d86e514feb"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-205006",
+      "size": 18058,
+      "sha256": "6939dd764891e6cc8b5691af77e626c62364d75ca6182704cda0d0e4c43d8513"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-205811",
+      "size": 20497,
+      "sha256": "05961aae4922b9bf6278a749f52b80c24ca55fd22fd64ecbe59e193e226a8ccb"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-212127",
+      "size": 24593,
+      "sha256": "894333a5c33c471957370c934e53963d2e4fdfd763d3491705bfbd7aa5a35d52"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-220929",
+      "size": 26605,
+      "sha256": "c7dc76db9a75474a85e9c587a67d6c64bfa76653495988ca2ffd246d42bec299"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-221702",
+      "size": 31347,
+      "sha256": "0f7edaea99b9fbd46f0231cc147a9567314e01e03924456630ee00f3b9554113"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-223548",
+      "size": 35375,
+      "sha256": "9a6158163f6baef0ef5214b9751cfc1dc2e564f047f5d915bd4070ef0d0d41c5"
+    },
+    {
+      "path": "api-probe.py.bak-20261030-230131",
+      "size": 40104,
+      "sha256": "1db6099a342f0c21314a29d999a275159f39ab06c2a400a1404b608006430f2c"
+    },
+    {
+      "path": "api-probe.py.before-fontface-20261030-233318",
+      "size": 43187,
+      "sha256": "9b79152b05d5a1768bc2cfe87ce6d6ba730f4841e4a5bb332b9fea49faaf8a4b"
+    },
+    {
+      "path": "api-probe.py.before-picker",
+      "size": 9278,
+      "sha256": "853c61af12f743bf3f2294acde810efca2cfef716a14b20bcf63440f66fbddb7"
+    },
+    {
+      "path": "backup-312202-20261031-002457/fontface-custom.js",
+      "size": 10533,
+      "sha256": "e903d23f48dedccd1e0e00c0394a0c546eb6e787b185c3b2e08c232cadd5680c"
+    },
+    {
+      "path": "backup-312202-20261031-002457/fontface-survey.html",
+      "size": 1564,
+      "sha256": "937a1ec178974759df8be4af68238f31c3ee80f9f72488e64f569411b9eec108"
+    },
+    {
+      "path": "backup-before-cve-v4-20261030-160355/index.html",
+      "size": 3691,
+      "sha256": "c9ec113ee23d37d46f18f1416e6f1404af8e352064e3cd68b00155736a7a61da"
+    },
+    {
+      "path": "backup-before-cve-v4-20261030-160355/server.py",
+      "size": 12516,
+      "sha256": "936a02cd2c5641ab1679c7383f7c9eca3edb112d785d3f7c09e601f12250bde1"
+    },
+    {
+      "path": "backup-before-v2-20261030-150937/server.py",
+      "size": 5221,
+      "sha256": "bfd0f941e334c071e56316b78d2f44e45c9c612c34168576d4e7d71e73ed2cf6"
+    },
+    {
+      "path": "backup-before-v3-20261030-153726/index.html",
+      "size": 2415,
+      "sha256": "a3806f5bdb34ea9726299c8a6178d504f442f235af4b5cef30c99b5f3d28490d"
+    },
+    {
+      "path": "backup-before-v3-20261030-153726/ns2lab-worker.js",
+      "size": 127,
+      "sha256": "c6602aa845e119642ec386e99a7a8dc630ac090085dcd2ef28b77f0d388e8855"
+    },
+    {
+      "path": "backup-before-v3-20261030-153726/ns2lab.js",
+      "size": 24938,
+      "sha256": "c7590bae29abd459fef5c75b544be18ceba8bb79d4c8c3c507ad5e557947b8b1"
+    },
+    {
+      "path": "backup-before-v3-20261030-153726/server.py",
+      "size": 4334,
+      "sha256": "b38af167999267def3af25bc87eae939646911149d827d1def5907f49451291d"
+    },
+    {
+      "path": "backup-before-v3-20261030-153928/index.html",
+      "size": 2415,
+      "sha256": "a3806f5bdb34ea9726299c8a6178d504f442f235af4b5cef30c99b5f3d28490d"
+    },
+    {
+      "path": "backup-before-v3-20261030-153928/ns2lab-worker.js",
+      "size": 127,
+      "sha256": "c6602aa845e119642ec386e99a7a8dc630ac090085dcd2ef28b77f0d388e8855"
+    },
+    {
+      "path": "backup-before-v3-20261030-153928/ns2lab.js",
+      "size": 24938,
+      "sha256": "c7590bae29abd459fef5c75b544be18ceba8bb79d4c8c3c507ad5e557947b8b1"
+    },
+    {
+      "path": "backup-before-v3-20261030-153928/server.py",
+      "size": 4334,
+      "sha256": "b38af167999267def3af25bc87eae939646911149d827d1def5907f49451291d"
+    },
+    {
+      "path": "backup-before-v3-20261030-154214/index.html",
+      "size": 2415,
+      "sha256": "a3806f5bdb34ea9726299c8a6178d504f442f235af4b5cef30c99b5f3d28490d"
+    },
+    {
+      "path": "backup-before-v3-20261030-154214/ns2lab-worker.js",
+      "size": 127,
+      "sha256": "c6602aa845e119642ec386e99a7a8dc630ac090085dcd2ef28b77f0d388e8855"
+    },
+    {
+      "path": "backup-before-v3-20261030-154214/ns2lab.js",
+      "size": 24938,
+      "sha256": "c7590bae29abd459fef5c75b544be18ceba8bb79d4c8c3c507ad5e557947b8b1"
+    },
+    {
+      "path": "backup-before-v3-20261030-154214/server.py",
+      "size": 4334,
+      "sha256": "b38af167999267def3af25bc87eae939646911149d827d1def5907f49451291d"
+    },
+    {
+      "path": "backup-before-v4-auto-20261030-161522/cve_v4.py",
+      "size": 12667,
+      "sha256": "5364332b8e48999336c64c1a2b327777b19b6972576d21af145addd678ac401f"
+    },
+    {
+      "path": "backup-before-v4-auto-20261030-161522/index.html",
+      "size": 3772,
+      "sha256": "64a611822ee1988ed1da01446b2fcdeba807d8f6bab44f5b093522037053d65a"
+    },
+    {
+      "path": "backup-before-v4-auto-20261030-161522/server.py",
+      "size": 12649,
+      "sha256": "5f0c1ef624bbbc66acc6c59a636534a5a2dbdbb87f0de28b437b510ac9ba89dc"
+    },
+    {
+      "path": "backup-before-v5-20261030-162619/index.html",
+      "size": 3845,
+      "sha256": "1029cb414696990d665a09a186a78bef82f02f6c1105f2340f427560f299fb1f"
+    },
+    {
+      "path": "backup-before-v5-20261030-162619/server.py",
+      "size": 12772,
+      "sha256": "c65774373b1750910f9d6386c88ad93245c810def2ff5198cf9bb86fa835c73e"
+    },
+    {
+      "path": "backup-before-v51-20261030-165114/index.html",
+      "size": 3935,
+      "sha256": "8f739b07e5daf16f99b307450c8c85d6549bc4807a598b5a0dcfe445b2c82000"
+    },
+    {
+      "path": "backup-before-v51-20261030-165114/server.py",
+      "size": 12886,
+      "sha256": "c6164bd1f92cfd5e750dc7b7fc962411617bd32ec7e81245b8044c0d568941c8"
+    },
+    {
+      "path": "backup-buffer-timeline-20261031-004257/fontface-custom.js",
+      "size": 29807,
+      "sha256": "61f5c0d4968eddce31c5c11e178058ee07f882c369e6117141bf2373d8dfa7aa"
+    },
+    {
+      "path": "backup-buffer-timeline-20261031-004257/fontface-survey.html",
+      "size": 2182,
+      "sha256": "8f414e93aaee7224ceac621a4d57479f3f1debd2cadbe965008de3b10dba292b"
+    },
+    {
+      "path": "backup-dualfont-20261030-235728/fontface-custom.js",
+      "size": 4438,
+      "sha256": "c2b621f46a4d7ab43cab623182b478e46d0d1cace53e8e15a83ff744a017d8c8"
+    },
+    {
+      "path": "backup-dualfont-20261030-235728/fontface-survey.html",
+      "size": 1206,
+      "sha256": "e8f43f5344c0b92a77d2ff0928ae657ad8b0c9084c5d9356087ea435590a8a63"
+    },
+    {
+      "path": "backup-fontset-safe-v2-20261031-020110/api-probe.py",
+      "size": 14453,
+      "sha256": "07dd30a39469fd8a3ab4b4e58d530e8c5a41da7da59e870b89ff4342363956c5"
+    },
+    {
+      "path": "backup-fontset-safe-v2-20261031-020110/index.html",
+      "size": 4258,
+      "sha256": "fb76e9d3d61b6974c87516dd2997fb50615e00b1c1e39da890acfc3dda8a4444"
+    },
+    {
+      "path": "backup-getter-audit-20261031-005121/fontface-custom.js",
+      "size": 36119,
+      "sha256": "a612d09dcab7b3d61645147f3290ca0ab95e6d5612cd7efd56e47e996106152c"
+    },
+    {
+      "path": "backup-getter-audit-20261031-005121/fontface-survey.html",
+      "size": 2486,
+      "sha256": "d8256a8b3f36e4c4cbf6988b3d806aa9ef3358d770f5dd8bc0f1fb975fbab371"
+    },
+    {
+      "path": "backup-timeline-20261031-003847/fontface-custom.js",
+      "size": 24225,
+      "sha256": "06ce20ff2ee37a0b8bd2cc3070dcffc1a75ef5debaf8f4f4402212d942c64990"
+    },
+    {
+      "path": "backup-timeline-20261031-003847/fontface-survey.html",
+      "size": 1901,
+      "sha256": "7fa0f26086afacd86e831dba4db96ff09a873520f3aa87e9118e37ae9bf543de"
+    },
+    {
+      "path": "csp-matrix.py.20261030-172026.bak",
+      "size": 7821,
+      "sha256": "8dafc4c8ea5ac7c73a105bf54e355c9f88e4a38fc18414659499c27c5666b24c"
+    },
+    {
+      "path": "fontface-custom.js.bak-20261031-005816",
+      "size": 42959,
+      "sha256": "e1ecd2e5e6254f7fba82b33b5faa9a0665bdf1a956a47ce05e9c53b5c7ee0d62"
+    },
+    {
+      "path": "fontface-custom.js.bak-20261031-010339",
+      "size": 54994,
+      "sha256": "313f207930922f5869797a852e84333fd20864bfe22242ee46cf6cdd7106a372"
+    },
+    {
+      "path": "fontface-custom.js.bak-312202-20261031-010634",
+      "size": 55054,
+      "sha256": "2d9309ff23cda1756b48c43cdf2aaa4e977b2c3facf255e9ce4c601883d683f9"
+    },
+    {
+      "path": "fontface-safe.html.bak-lifecycle-20261031-021322-960440",
+      "size": 5680,
+      "sha256": "36bee0848f50a6f505ef7246ee4b2a0381a3f05a6ca0b2da88af3b68d878b407"
+    },
+    {
+      "path": "fontface-safe.html.bak-wrapper-20261031-021819-113424",
+      "size": 13063,
+      "sha256": "a765653e733d600859671b44a15e71b8f7a35e5d46b9e7835a5ac4fb68318d85"
+    }
+  ]
+}

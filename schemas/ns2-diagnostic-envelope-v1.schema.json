@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schemas/ns2-diagnostic-envelope-v1.schema.json",
+  "title": "WebKit2JB diagnostic report envelope",
+  "type": "object",
+  "required": ["reportEnvelopeVersion", "schema", "schemaVersion", "reportId", "sessionId", "startedAt", "testId", "testVersion", "capabilities", "events", "errors"],
+  "properties": {
+    "reportEnvelopeVersion": {"const": 1},
+    "schema": {"type": "string", "minLength": 1, "maxLength": 100},
+    "schemaVersion": {"type": "integer", "minimum": 1},
+    "reportId": {"type": "string", "minLength": 1, "maxLength": 80},
+    "sessionId": {"type": "string", "minLength": 1, "maxLength": 100},
+    "startedAt": {"type": "string", "minLength": 20, "maxLength": 40},
+    "testId": {"type": "string", "enum": ["api", "font-load", "reentrancy"]},
+    "testVersion": {"type": "string", "minLength": 1, "maxLength": 32},
+    "userAgent": {"type": ["string", "null"]},
+    "origin": {"type": ["string", "null"]},
+    "capabilities": {"type": "object"},
+    "events": {"type": "array", "maxItems": 512, "items": {"$ref": "#/$defs/event"}},
+    "errors": {"type": "array", "maxItems": 64, "items": {"$ref": "#/$defs/error"}},
+    "result": {"type": "string", "maxLength": 64}
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "required": ["name", "timestamp", "elapsedMs", "info"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1, "maxLength": 100},
+        "timestamp": {"type": "string", "minLength": 20, "maxLength": 40},
+        "elapsedMs": {"type": "integer", "minimum": 0},
+        "info": {"type": "object"},
+        "state": {"type": "object", "properties": {
+          "documentFontsStatus": {"type": ["string", "null"]},
+          "documentFontsSize": {"type": ["integer", "null"], "minimum": 0},
+          "fontFaceStatus": {"type": ["string", "null"]}
+        }}
+      }
+    },
+    "error": {
+      "type": "object",
+      "required": ["phase", "name", "message"],
+      "properties": {
+        "phase": {"type": "string", "maxLength": 64},
+        "name": {"type": "string", "maxLength": 128},
+        "message": {"type": "string", "maxLength": 1024}
+      }
+    }
+  },
+  "additionalProperties": true
+}
