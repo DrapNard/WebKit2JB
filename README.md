@@ -20,7 +20,7 @@ See [`bridge/README.md`](bridge/README.md), [`bridge/HORIZON-BUILD.md`](bridge/H
 
 ## Public-release scope
 
-This source snapshot intentionally excludes private run reports, firmware archives, WebKit source archives, generated container layers, large build outputs, firmware/source archives, legacy crash-trigger experiments, and historical private reports. A tiny fixed x86-64 example ELF remains only as a read-only metadata-validation fixture; the portal does not extract or execute it. Original research artifacts remain unchanged in the local workspace. The inventory records backup hashes without disclosing their contents.
+This source snapshot intentionally excludes private run reports, firmware and WebKit source archives, generated container layers, and large build outputs, legacy crash-trigger experiments, and historical private reports. A tiny fixed x86-64 example ELF remains only as a read-only metadata-validation fixture; the portal does not extract or execute it. Original research artifacts remain unchanged in the local workspace. The inventory records backup hashes without disclosing their contents.
 
 ## Licensing
 

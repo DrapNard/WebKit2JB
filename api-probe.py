@@ -491,7 +491,7 @@ class Handler(BaseHTTPRequestHandler):
         try:
             data = path.read_bytes()
         except OSError:
-            self.send_error(404, f"Fichier manquant : {filename}")
+            self.send_error(404, f"File not found: {filename}")
             return
         if filename == "index.html" and self.command == "GET":
             start_served_page(self.client_address[0], data)
