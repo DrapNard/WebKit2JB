@@ -1,6 +1,8 @@
 # WebKit2JB
 
-A local captive-portal research lab with safe browser diagnostics and a non-privileged native bridge for Linux and Horizon homebrew. The project separates browser observations, host-side tooling, and Horizon build artifacts.
+A local captive-portal research lab with safe browser diagnostics. The project separates browser observations, host-side tooling, and Horizon build artifacts.
+
+[!CAUTION] > NO REAL EXPLOIT IS HERE JUST FIND SOME PATH HERE
 
 ## Project map
 
